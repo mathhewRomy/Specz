@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Add the dependency for the Google services Gradle plugin
+        classpath 'com.google.gms:google-services:4.4.1'
+    }
+}
+
+ext.kotlin_version = '1.7.1'
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    // This sets the build directory relative to the root project directory
+    rootProject.buildDir = '../build'
+    
+    // This sets the build directory for each subproject
+    subprojects {
+        project.buildDir = "${rootProject.buildDir}/${project.name}"
+    }
+    
+    // This ensures that each subproject's evaluation depends on the :app project
+    project.evaluationDependsOn(':app')
+}
+
+// This defines a custom clean task to delete the entire build directory
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

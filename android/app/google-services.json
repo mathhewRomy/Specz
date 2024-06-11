@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "195039826381",
+    "project_id": "specz-d79eb",
+    "storage_bucket": "specz-d79eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195039826381:android:4f568463141e3053f87484",
+        "android_client_info": {
+          "package_name": "com.example.specz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBudjYLis32Z9oDoVEOOFkxqL8DGcfKcNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
